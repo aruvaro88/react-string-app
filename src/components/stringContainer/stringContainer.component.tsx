@@ -23,14 +23,16 @@ export const StringContainer = () =>{
     
     return(<div className={`${styles.stringContainer}`}>
         <div className={`${styles.titleContainer}`}>
-            <span>This is a technical proof</span>
-            <span>Lorem impsum</span>
+            <span className={`${styles.header}`}>This is a technical proof</span>
+            <span className={`${styles.subHeader}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla at mauris ac maximus. Nunc id auctor ligula. Sed vel neque sit amet lacus porttitor dapibus vehicula vitae ligula. Nulla convallis enim felis, quis tempus nunc convallis eu. Praesent non porttitor arcu. Nunc lorem ipsum, sollicitudin at lorem et, auctor pharetra mi. In in elementum nulla. In hac habitasse platea dictumst. Vestibulum lobortis lorem ac sodales tempor. 
+                Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec odio metus, blandit eget dui vitae, pretium feugiat augue. Phasellus facilisis elit nulla, 
+                sed egestas mauris aliquet et. Nam ac lacus mauris.</span>
         </div>
-         <div>
+         <div className={`${styles.itemListContainer}`}>
             <ItemList/>
         </div>
         <div className={`${styles.buttonsContainer}`}>
-        <div>
+        <div className={`${styles.secondaryButtons}`}>
             <Button variant="secondary" onClick={handleDelete}>Undo</Button>
             <Button variant="secondary" onClick={handleDelete}>Eliminar</Button>
         </div>

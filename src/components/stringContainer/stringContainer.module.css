@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 16px;
 }
 
 .buttonsContainer{
@@ -24,4 +25,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.subHeader{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.secondaryButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemListContainer{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 16px;
+    border: 1px solid #f2f2f2;
+    margin: 16px 0 16px 0;
 }

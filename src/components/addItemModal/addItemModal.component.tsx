@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useItemList} from '../../hooks/useItemList.ts'
 import Item from '../../models/item.model.ts'
+import styles from "./addItemModal.module.css"
+import Button from '../button/button.component'
 
 interface AddItemModalProps{
     onClose: () => void
@@ -17,22 +19,19 @@ const AddItemModal = ({onClose}) =>{
     }
 
     return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <h2>Agregar un nuevo ítem</h2>
+    <div className={`${styles.modalContainer}`}>
+      <div className={`${styles.modalContent}`}>
+        <span className={`${styles.header}`}>Add item to list</span>
         <input
           type="text"
-          placeholder="Contenido del ítem"
+          placeholder="Type the text here"
           value={newItemString}
           onChange={(e) => setNewItemString(e.target.value)}
+          className={`${styles.textInput}`}
         />
-        <div className="modal-actions">
-          <button className="primary-btn" onClick={handleAddItem}>
-            Añadir
-          </button>
-          <button className="secondary-btn" onClick={onClose}>
-            Cancelar
-          </button>
+        <div className={`${styles.buttonsContainer}`}>
+            <Button variant="primary" onClick={handleAddItem}>Añadir</Button>
+            <Button variant="secondary" onClick={onClose}>Cancelar</Button>
         </div>
       </div>
     </div>

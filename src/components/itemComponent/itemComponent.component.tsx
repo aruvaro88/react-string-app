@@ -1,5 +1,7 @@
 import React from "react";
 import { Item } from "../../models/item.model";
+import styles from "./itemComponent.module.css"
+import { useItemList } from '../../hooks/useItemList.ts'
 
 interface ItemComponentProps {
   item: Item;
@@ -8,12 +10,14 @@ interface ItemComponentProps {
 }
 
 const ItemComponent = ({ item, isSelected, onSelect }:ItemComponentProps) => {
+    const { removeFromItemList } = useItemList()
   return (
     <div
-      className={`item ${isSelected ? "selected" : ""}`}
+      className={`${styles.item} ${isSelected && styles.selected}`}
       onClick={() => onSelect(item.id)}
+      onDoubleClick={()=>removeFromItemList(item.id)}
     >
-      <p>{item.content}</p>
+      <span>{item.content}</span>
     </div>
   );
 };

@@ -11,6 +11,7 @@ export const useItemList = () => {
     }
 
     const removeFromItemList = (item: Item) =>{
+        console.log(item.id)
         setItemList(itemList.filter((elm)=> elm.id !== item.id))
     } 
 

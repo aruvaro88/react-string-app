@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useItemList } from "../../hooks/useItemList";
 import ItemComponent from "../itemComponent/itemComponent.component";
-import './itemList.styles.css'
+import styles from './itemList.module.css'
 
 const ItemList = () => {
   const { itemList } = useItemList();
@@ -17,7 +17,7 @@ const ItemList = () => {
   };
 
   return (
-    <div className="item-list-container">
+    <div>
       {itemList.map((item: Item) => (
         
               <ItemComponent

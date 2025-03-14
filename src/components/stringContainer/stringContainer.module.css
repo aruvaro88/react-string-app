@@ -1,0 +1,27 @@
+.stringContainer{
+    background-color: white;
+    padding: 48px;
+    border-radius: 5px;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:40%;
+    height: auto;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

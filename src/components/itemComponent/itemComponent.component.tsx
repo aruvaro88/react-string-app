@@ -15,7 +15,7 @@ const ItemComponent = ({ item, isSelected, onSelect }:ItemComponentProps) => {
     <div
       className={`${styles.item} ${isSelected && styles.selected}`}
       onClick={() => onSelect(item.id)}
-      onDoubleClick={()=>removeFromItemList(item.id)}
+      onDoubleClick={()=>removeFromItemList([item.id])}
     >
       <span>{item.content}</span>
     </div>

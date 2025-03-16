@@ -3,10 +3,11 @@ export interface Item{
     content: string
 }
 
-export interface ItemContext{
-    itemsList: Item[]
-    addItem: (item: Item) => void;
-    removeItem: (id: number) => void;
-    undoLastAction: () => void;
-
+export interface ItemContext {
+    itemList: Item[];
+    setItemList: (items: Item[]) => void;
+    selectedItems: number[];
+    setSelectedItems: (items: number[]) => void;
+    lastState: Item[] | null;
+    setLastState: (items:Item[] | null) => void
 }

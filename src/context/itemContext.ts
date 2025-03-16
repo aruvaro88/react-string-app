@@ -7,5 +7,6 @@ export const ItemListContext = createContext<ItemContext>({
     setItemList: () => {},
     selectedItems: [],
     setSelectedItems: ()=> {},
-    setHistory: () => {},
+    lasState: null,
+    setLastState: () => {}
 })

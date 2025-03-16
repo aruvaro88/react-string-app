@@ -11,11 +11,16 @@ interface AddItemModalProps{
 const AddItemModal = ({onClose}) =>{
     const { addToItemList } = useItemList()
     const [newItemString, setNewItemString] = useState<string>("")
+    const [inputError, setInputError] = useState<boolean>(false)
 
     const handleAddItem = () => {
-        addToItemList({id: Date.now(), content: newItemString})
-        setNewItemString("")
-        onClose()
+        if(newItemString === ""){
+            setInputError(true)
+        }else{
+            addToItemList({id: Date.now(), content: newItemString})
+            setNewItemString("")
+            onClose()
+        }
     }
 
     return (
@@ -29,8 +34,9 @@ const AddItemModal = ({onClose}) =>{
           onChange={(e) => setNewItemString(e.target.value)}
           className={`${styles.textInput}`}
         />
+        {inputError && <span className={`${styles.inputError}`}>You cannot enter an empty text</span>}
         <div className={`${styles.buttonsContainer}`}>
-            <Button variant="primary" onClick={handleAddItem}>Añadir</Button>
+            <Button variant="primary" onClick={handleAddItem}>ADD</Button>
             <Button variant="secondary" onClick={onClose}>Cancelar</Button>
         </div>
       </div>

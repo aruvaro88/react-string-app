@@ -1,15 +1,16 @@
 import React from "react";
-import styles from "./button.module.css"; // Importamos los estilos
+import styles from "./button.module.css";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary"; // Tipos de botón
-  onClick: () => void; // Función al hacer clic
-  children: React.ReactNode; // Contenido del botón
+  variant?: "primary" | "secondary"; 
+  onClick: () => void; 
+  children: React.ReactNode; 
+  disabled?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = "primary", onClick, children }) => {
+const Button: React.FC<ButtonProps> = ({ variant = "primary", onClick, children, disabled }) => {
   return (
-    <div className={`${styles.button} ${styles[variant]}`} onClick={onClick}>
+    <div className={`${styles.button} ${styles[variant]} ${disabled && styles.disabled}`} onClick={onClick}>
       {children}
     </div>
   );

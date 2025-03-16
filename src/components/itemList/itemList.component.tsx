@@ -7,17 +7,15 @@ const ItemList = () => {
   const { itemList, selectedItems, toggleSelectItem } = useItemList();
 
   return (
-    <div>
+    <div className={`${styles.itemListContainer}`}>
       {itemList.map((item: Item) => (
-        
-              <ItemComponent
-                key={item.id}
-                item={item}
-                isSelected={selectedItems?.includes(item.id) ?? false}
-                onSelect={toggleSelectItem}
-              />
-        
-          ))}
+        <ItemComponent
+        key={item.id}
+        item={item}
+        isSelected={selectedItems?.includes(item.id) ?? false}
+        onSelect={toggleSelectItem}
+        />
+    ))}
     </div>
   );
 };

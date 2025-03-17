@@ -6,7 +6,7 @@ import ItemList from "../itemList/itemList.component";
 import AddItemModal from "../addItemModal/addItemModal.component";
 import ReplayIcon from "@mui/icons-material/Replay";
 
-export const StringContainer = () => {
+export const StringContainer: React.FC = () => {
   const { itemList, removeFromItemList, selectedItems, undoAction } = useItemList();
   const [isModalVisible, setIsModalVisible] = useState(false);
 

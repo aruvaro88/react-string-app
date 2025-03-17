@@ -3,7 +3,7 @@ import { useItemList } from "../../hooks/useItemList";
 import ItemComponent from "../itemComponent/itemComponent.component";
 import styles from './itemList.module.css'
 
-const ItemList = () => {
+const ItemList: React.FC = () => {
   const { itemList, selectedItems, toggleSelectItem } = useItemList();
 
   return (

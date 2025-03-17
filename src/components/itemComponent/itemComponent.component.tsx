@@ -9,7 +9,7 @@ interface ItemComponentProps {
   onSelect: (id: number) => void;
 }
 
-const ItemComponent = ({ item, isSelected, onSelect }:ItemComponentProps) => {
+const ItemComponent: React.FC<ItemComponentProps>  = ({ item, isSelected, onSelect }:ItemComponentProps) => {
     const { removeFromItemList } = useItemList()
   return (
     <div

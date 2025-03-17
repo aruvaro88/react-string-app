@@ -1,3 +1,4 @@
+/*button.module.css*/
 .button {
   margin-right: 16px;
   padding: 10px 20px;
@@ -23,7 +24,7 @@
 }
 
 .secondary:hover {
-    border: 1px solid darkblue;
+  border: 1px solid darkblue;
   color: darkblue;
 }
 
@@ -38,4 +39,21 @@
 .disabled:hover {
   border: 1px solid #666;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-right: 0; 
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+      width: 100%; 
+      margin: 8px 0;
+      box-sizing: border-box; 
+  }
 }

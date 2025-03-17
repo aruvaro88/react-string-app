@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# String App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+String App is an application, made as a simple web code test that allows users to add, delete and restore items from a list. The interface features a modal to add items, a selection system to delete multiple items at once and an undo function to recover deleted items. This application has been made with React, created from scratch using vite, and using Typescript as programming language.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add items to the list using a pop-up modal.
 
-## Expanding the ESLint configuration
+Validation to avoid adding empty items.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Delete selected items from the list.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Restore the last deleted or added items using the “Undo” option.
+
+Intuitive interface and responsive design.
+
+
+## Installation
+
+In order to test the project, the first thing to do is to download it to your computer using the git command, git clone:
+
+```bash
+git clone https://github.com/aruvaro88/react-string-app.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Move to project directory
+```bash
+cd js-string-app
 ```
+
+Then you will have to install the dependencies that are used in the project, for this we use the command:
+```bash
+npm install
+```
+
+To start the project, we will use the command:
+```bash
+npm run dev
+```
+Open a browser window and paste the following url to view the project: http://localhost:5173/
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

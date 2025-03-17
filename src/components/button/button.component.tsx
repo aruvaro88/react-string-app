@@ -8,7 +8,7 @@ interface ButtonProps {
   disabled?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = "primary", onClick, children, disabled }) => {
+const Button = ({ variant = "primary", onClick, children, disabled }: ButtonProps) => {
   return (
     <div className={`${styles.button} ${styles[variant]} ${disabled && styles.disabled}`} onClick={onClick}>
       {children}

@@ -12,9 +12,7 @@ export const StringAppWrapper: React.FC = () =>{
     return(
         <div>
             <ItemListContext.Provider value={{itemList, setItemList, selectedItems, setSelectedItems, lastState, setLastState}}>
-                <div className={`${styles.wrapperContainer}`}>
                 <StringContainer/>
-                </div>
             </ItemListContext.Provider>
         </div>
     )

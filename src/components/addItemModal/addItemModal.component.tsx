@@ -8,7 +8,7 @@ interface AddItemModalProps{
     onClose: () => void
 }
 
-const AddItemModal: React.FC<AddItemModalProps> = ({onClose}) =>{
+const AddItemModal = ({onClose}: AddItemModalProps) =>{
     const { addToItemList } = useItemList()
     const [newItemString, setNewItemString] = useState<string>("")
     const [inputError, setInputError] = useState<boolean>(false)

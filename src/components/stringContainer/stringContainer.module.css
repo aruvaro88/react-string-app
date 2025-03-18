@@ -1,83 +1,70 @@
 /*stringContainer.module.css*/
-.stringContainer{
-    background-color: white;
-    padding: 48px;
-    border-radius: 5px;
-    display: flex;
-    align-self: center;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width:90%;
-    max-width: 800px;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.stringContainer {
+  background-color: white;
+  padding: 48px;
+  border-radius: 5px;
+  display: flex;
+  align-self: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.titleContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px;
-    margin-bottom: 16px;
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
-.buttonsContainer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  font-size: 28px;
+  font-weight: 800;
 }
 
-.header{
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.subHeader{
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.secondaryButtons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.subHeader {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
-    .stringContainer {
-        width: 90%;
-        padding: 24px;
-    }
-    .header {
-        font-size: 24px;
-    }
-    .subHeader {
-        font-size: 16px;
-    }
+  .stringContainer {
+    width: 90%;
+    padding: 24px;
+  }
+  .header {
+    font-size: 24px;
+  }
+  .subHeader {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    .stringContainer {
-        width: 85%;
-        padding: 16px;
-    }
-    .buttonsContainer {
-        flex-direction: column;
-        width: 100%; 
-        padding: 0 16px; 
-        box-sizing: border-box; 
-    }
+  .stringContainer {
+    width: 85%;
+    padding: 16px;
+  }
+  .buttonsContainer {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
 
-    .secondaryButtons {
-        flex-direction: column;
-        width: 100%;
-    }
+  .secondaryButtons {
+    flex-direction: column;
+    width: 100%;
+  }
 }

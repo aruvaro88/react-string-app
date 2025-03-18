@@ -1,10 +1,36 @@
 /*itemList.module.css*/
-.itemListContainer{
+.itemListContainer {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 16px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 16px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondaryButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .buttonsContainer {
+    flex-direction: column;
     width: 100%;
-    background-color: #f7f7f7;
-    padding: 16px;
-    border: 1px solid #f2f2f2;
-    margin-bottom: 16px;
-    max-height: 50vh;
-    overflow-y: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .secondaryButtons {
+    flex-direction: column;
+    width: 100%;
+  }
 }

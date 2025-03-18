@@ -1,19 +1,19 @@
-import React from "react";
-import styles from "./button.module.css";
+import React from "react"
+import styles from "./button.module.css"
 
 interface ButtonProps {
-  variant?: "primary" | "secondary"; 
-  onClick: () => void; 
-  children: React.ReactNode; 
+  variant?: "primary" | "secondary"
+  onClick: () => void
+  children: React.ReactNode
   disabled?: boolean
 }
 
 const Button = ({ variant = "primary", onClick, children, disabled }: ButtonProps) => {
   return (
-    <div className={`${styles.button} ${styles[variant]} ${disabled && styles.disabled}`} onClick={onClick}>
+    <button className={`${styles.button} ${styles[variant]}`} disabled={disabled} onClick={onClick}>
       {children}
-    </div>
-  );
-};
+    </button>
+  )
+}
 
-export default Button;
+export default Button

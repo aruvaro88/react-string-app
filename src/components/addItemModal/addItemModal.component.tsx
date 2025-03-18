@@ -1,29 +1,27 @@
-import React, { useState } from 'react'
-import { useItemList} from '../../hooks/useItemList.ts'
-import Item from '../../models/item.model.ts'
+import { useState } from "react"
+import { Item } from "../../models/item.model.ts"
+import Button from "../button/button.component"
 import styles from "./addItemModal.module.css"
-import Button from '../button/button.component'
 
-interface AddItemModalProps{
-    onClose: () => void
+interface AddItemModalProps {
+  onClose: () => void
+  onAddItem: (item: Item) => void
 }
 
-const AddItemModal = ({onClose}: AddItemModalProps) =>{
-    const { addToItemList } = useItemList()
-    const [newItemString, setNewItemString] = useState<string>("")
-    const [inputError, setInputError] = useState<boolean>(false)
+const AddItemModal = ({ onClose, onAddItem }: AddItemModalProps) => {
+  const [newItemString, setNewItemString] = useState<string>("")
+  const [inputError, setInputError] = useState<boolean>(false)
 
-    const handleAddItem = () => {
-        if(newItemString === ""){
-            setInputError(true)
-        }else{
-            addToItemList({id: Date.now(), content: newItemString})
-            setNewItemString("")
-            onClose()
-        }
+  const handleAddItem = () => {
+    if (newItemString === "") {
+      setInputError(true)
+    } else {
+      onAddItem({ id: Date.now(), content: newItemString })
+      onClose()
     }
+  }
 
-    return (
+  return (
     <div className={`${styles.modalContainer}`}>
       <div className={`${styles.modalContent}`}>
         <span className={`${styles.header}`}>Add item to list</span>
@@ -36,12 +34,15 @@ const AddItemModal = ({onClose}: AddItemModalProps) =>{
         />
         {inputError && <span className={`${styles.inputError}`}>You cannot enter an empty text</span>}
         <div className={`${styles.buttonsContainer}`}>
-            <Button variant="primary" onClick={handleAddItem}>ADD</Button>
-            <Button variant="secondary" onClick={onClose}>Cancelar</Button>
+          <Button variant="primary" onClick={handleAddItem}>
+            ADD
+          </Button>
+          <Button variant="secondary" onClick={onClose}>
+            Cancelar
+          </Button>
         </div>
       </div>
     </div>
-  );
-
-  }
-export default AddItemModal;
+  )
+}
+export default AddItemModal

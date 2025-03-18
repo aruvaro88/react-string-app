@@ -28,32 +28,27 @@
   color: darkblue;
 }
 
-.disabled {
+.button:disabled {
   background-color: #ccc;
   color: #666;
-  cursor:default;
+  cursor: default;
   opacity: 0.5;
-  border: 1px solid #666
-}
-
-.disabled:hover {
   border: 1px solid #666;
-  color: #666;
 }
 
 @media (max-width: 768px) {
   .button {
     padding: 8px 16px;
     font-size: 14px;
-    margin-right: 0; 
-    width: 100%; 
+    margin-right: 0;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .button {
-      width: 100%; 
-      margin: 8px 0;
-      box-sizing: border-box; 
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
   }
 }
